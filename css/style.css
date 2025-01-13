@@ -382,8 +382,25 @@ footer li {
     flex-direction: column;
   }
 
+  .filters {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 37px;
+  }
+
+  .filters ul {
+    padding-left: 0;
+    margin: 6px 0 2px 0;
+  }
   .hebergements {
     width: 100%;
+  }
+
+  .hebergements-cards a {
+    width: 268px;
+    height: 207px;
+    margin-bottom: 30px;
   }
 
   .populaires {
@@ -391,6 +408,9 @@ footer li {
     margin-top: 50px;
   }
 
+  .populaires-title {
+    margin-bottom: 20px;
+  }
   .populaires-cards {
     display: flex;
     flex-direction: row;
