@@ -166,7 +166,7 @@ h1 {
   color: #000000;
 }
 
-.search-input i {
+.fa-location-dot {
   color: #000000;
   background-color: #f2f2f2;
   border-top-left-radius: 15px;
@@ -174,14 +174,23 @@ h1 {
   font-size: 18px;
   padding: 15px 18px;
 }
-
-.search-input button {
+.search-field {
+  width: 222px;
+}
+.rechercher {
+  font-size: 18px;
+}
+.btn_search {
+  width: 132px;
   background-color: var(--main-color);
   color: #ffffff;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: none;
   height: 96%;
+}
+.mobile_btn_search {
+  display: none;
 }
 
 /****** Filters ***********/
@@ -194,17 +203,20 @@ h1 {
 .filters h2 {
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .filters ul {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin: 0;
   padding-left: 15px;
 }
 
 .filters button {
   background-color: #ffffff;
+  height: 50px;
   border: 1px solid var(--main-bg-color);
   padding: 15px 19px;
   border-radius: 25px;
@@ -248,7 +260,7 @@ h1 {
 
 .hebergements-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-top: 30px;
 }
@@ -322,6 +334,9 @@ h1 {
 
 /****** Activités ***********/
 
+.activites {
+  padding-top: 30px;
+}
 .activites-card {
   display: flex;
   justify-content: space-between;
@@ -354,12 +369,12 @@ h1 {
 footer {
   display: flex;
   margin-top: 65px;
-  padding: 20px;
   background-color: var(--main-bg-color);
 }
 
 footer div {
   width: 445px;
+  padding: 20px;
 }
 
 footer h3 {
@@ -392,6 +407,9 @@ footer li {
   .filters ul {
     padding-left: 0;
     margin: 6px 0 2px 0;
+  }
+  .hebergements-and-populaires {
+    flex-direction: column;
   }
   .hebergements {
     width: 100%;
@@ -462,9 +480,137 @@ footer li {
   footer {
     padding-bottom: 15px;
   }
+  footer div {
+    display: inline-block;
+    width: 308px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  body {
+    margin: 0;
+  }
+  .main-container {
+    padding: 0;
+  }
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+  }
+  header {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .div_logo {
+    margin: 30px;
+    height: 20px;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    height: 36px;
+    padding: 0;
+  }
+  header ul {
+    gap: 0;
+    padding: 0;
+  }
+  nav li {
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  header li:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid var(--main-color);
+    border-top: none;
+  }
+  main {
+    padding: 30px 0;
+  }
+  .hero,
+  .search {
+    margin: 0 20px;
+  }
+  .hero {
+    padding: 30px 0 62px 0;
+  }
+  .search-input {
+    width: 335px;
+  }
+  .search-input input {
+    width: 236px;
+  }
+  .search-field {
+    width: 236px;
+  }
+  .btn_search {
+    display: none;
+  }
+  .mobile_btn_search {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--main-color);
+  }
+  .mobile_btn_search i {
+    color: var(--main-bg-color);
+  }
+  .filters ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filters li {
+    width: 162px;
+  }
+  .filters button {
+    width: 100%;
+  }
+  .populaires {
+    margin-top: 0;
+  }
+  .populaires-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .populaires-cards a {
+    width: 100%;
+  }
+  .hebergements {
+    background-color: #ffffff !important;
+    padding-top: 20px;
+  }
+  .hebergements-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .hebergements-cards a {
+    width: 100%;
+  }
+  .activites-title {
+    margin-top: 0;
+  }
+  .activites-card {
+    flex-direction: column;
+  }
+  .activites-card a {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px;
+  }
+  footer div {
+    width: 100%;
+    padding: 0;
+  }
 }
